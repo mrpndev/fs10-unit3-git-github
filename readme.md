@@ -45,3 +45,24 @@
 - date the commit occurred
 - commit message
 - to get out of it, you may need to hit `q`
+
+## Connecting Git Repo to GitHub Repo
+- create a repository on GitHub
+	- sign in to GitHub with your credentials
+	- find the green `new` button to create a new repository
+	- give it a repository name
+	- choose visibility (usuallly public)
+	- click `create repository`
+- copy the HTTPS (or SSH if your setup requires it) link to your repo
+- run the following command `git remote add origin <paste your link here>`
+	- `remote` is responsible for remote repos
+	- `add` adds something
+	- `origin` this is the name we will give our remote repo to reference later. Commonly use origin or upstream.
+	- `<your link>` is the HTTPS or SSH endpoint from the GitHub repo
+- return back to syntax is a good thing!
+- to verify it's successfully linked, run `git remote -v` to see the endpoint
+- you should see the following:
+	- name of the endpoint
+	- the endpoint itself
+	- fetch (bring down) and push (send up)
+- in order to push your code, run `git push origin <name of branch>` (ex: `git push origin main`)
